@@ -1,0 +1,13 @@
+{
+    "python.pythonPath": "C:\\Users\\ysun6\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
+    "team.showWelcomeMessage": false,
+    "editor.formatOnSave": true,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pylintPath": "/path/to/pylint",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "python.venvPath": "${workspaceFolder}/dj_todo/venv/Scripts/python.exe",
+    "python.linting.pylintEnabled": true
+}
