@@ -11,6 +11,10 @@ export class TodoItem extends Component {
         }
     }
 
+    // markComplete = (e) => {
+    //     console.log(this.props.todo.title)
+    // }
+
     render() {
         const { id, title, completed } = this.props.todo
         return (

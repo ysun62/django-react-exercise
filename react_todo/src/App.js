@@ -18,16 +18,24 @@ class App extends React.Component {
   }
 
   markComplete = (id) => {
-    this.setState({ todos: this.state.todos.map(todo => {
+    this.state.todos.map(todo => {
       if(todo.id === id) {
-        todo.completed = !todo.completed;
+        axios.put(`http://127.0.0.1:8000/api/${id}/`, {
+          completed: !todo.completed
+        })
+        .then(res => this.setState({ todos: this.state.todos.map(todo => {
+          if(todo.id === id) {
+            todo.completed = !todo.completed;
+          }
+          return todo;
+        })}))
       }
       return todo;
-    })});
+    })
   }
 
   delTodo = (id) => {
-    axios.delete(`http://127.0.0.1:8000/api/${id}`)
+    axios.delete(`http://127.0.0.1:8000/api/${id}/`)
       .then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]}));
     
   }
