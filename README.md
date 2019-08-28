@@ -6,3 +6,6 @@ To get started:
 2. Run Django server, "python manage.py runserver"
 3. On a different terminal, go to React main folder, "cd react_todo"
 4. Run React server, "npm start"
+
+A screenshot of the Todo List
+![](react_todo/screenshots/todo_home.png)
